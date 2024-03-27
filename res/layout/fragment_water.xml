@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/hhh"
+   >
+
+    <TextView
+        android:id="@+id/ageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/heightTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ageTextView"
+        android:layout_marginTop="8dp"
+        android:text="Height:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/weightTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/heightTextView"
+        android:layout_marginTop="8dp"
+        android:text="Weight:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <!-- Edit Button -->
+    <Button
+        android:id="@+id/editButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/weightTextView"
+        android:layout_marginTop="16dp"
+        android:text="Edit"
+        android:onClick="onEditButtonClick" />
+
+    <!-- Editable EditTexts (Initially Hidden) -->
+    <EditText
+        android:id="@+id/editAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Edit Age"
+        android:inputType="number"
+        android:layout_below="@id/editButton"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/editHeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Edit Height"
+        android:inputType="number"
+        android:layout_below="@id/editAge"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/editWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Edit Weight"
+        android:inputType="number"
+        android:layout_below="@id/editHeight"
+        android:visibility="gone" />
+
+    <!-- Water Intake Score -->
+    <TextView
+        android:id="@+id/waterScoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editWeight"
+        android:layout_marginTop="16dp"
+        android:text="Water Intake Score: N/A"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+    <!-- Calculate Button -->
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/waterScoreTextView"
+        android:layout_marginTop="16dp"
+        android:text="Calculate"
+        android:onClick="calculateWaterIntake" />
+    <EditText
+        android:id="@+id/reminderTimeEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/calculateButton"
+        android:layout_marginTop="16dp"
+        android:hint="Enter reminder time (minutes)"
+        android:inputType="number"
+        android:minHeight="48dp" />
+
+
+</RelativeLayout>
